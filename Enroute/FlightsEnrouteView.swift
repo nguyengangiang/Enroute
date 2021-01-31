@@ -19,6 +19,7 @@ struct FlightSearch {
 
 struct FlightsEnrouteView: View {
     @State var flightSearch: FlightSearch
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         NavigationView {
@@ -35,6 +36,7 @@ struct FlightsEnrouteView: View {
         }
         .sheet(isPresented: $showFilter) {
             FilterFlights(flightSearch: self.$flightSearch, isPresented: self.$showFilter)
+                .environment(\.managedObjectContext, context)
         }
     }
     
@@ -51,8 +53,9 @@ struct FlightsEnrouteView: View {
 struct FlightList: View {
 
     @FetchRequest var flights: FetchedResults<Flight>
+    
     init(_ flightSearch: FlightSearch) {
-        let request = Flight.fetchRequest(NSPredicate(format: "destination_ = %@", flightSearch.destination))
+        let request = Flight.fetchRequest(flightSearch.predicate)
        _flights = FetchRequest(fetchRequest: request)
     }
     
@@ -106,7 +109,22 @@ struct FlightListEntry: View {
         return "from " + (flight.origin.friendlyName)
     }
 }
-
+extension FlightSearch {
+    var predicate: NSPredicate {
+        var format = "destination_ = %@"
+        var args: [NSManagedObject] = [destination]
+        if origin != nil {
+            format += " and origin_ = %@"
+            args.append(origin!)
+        }
+        if airline != nil {
+            format += " and airline_ = %@"
+            args.append(airline!)
+        }
+        if inTheAir { format += " and departure != nil" }
+        return NSPredicate(format: format, argumentArray: args)
+    }
+}
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        FlightsEnrouteView(flightSearch: FlightSearch(destination: "KSFO"))
