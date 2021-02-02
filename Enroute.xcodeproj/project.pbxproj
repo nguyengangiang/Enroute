@@ -23,6 +23,7 @@
 		C12A1E2B25C6174300A3FCA7 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A1E2225C6174300A3FCA7 /* FoundationExtensions.swift */; };
 		C12A1E2E25C6301200A3FCA7 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A1E2D25C6301200A3FCA7 /* Airport.swift */; };
 		C12A1E3125C63EBC00A3FCA7 /* Airline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A1E3025C63EBC00A3FCA7 /* Airline.swift */; };
+		C157265425C8F9E600AF72E6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C157265325C8F9E600AF72E6 /* MapView.swift */; };
 		C16D014D25C7378100A32802 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D014C25C7378100A32802 /* Flight.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		C12A1E2225C6174300A3FCA7 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 		C12A1E2D25C6301200A3FCA7 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		C12A1E3025C63EBC00A3FCA7 /* Airline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airline.swift; sourceTree = "<group>"; };
+		C157265325C8F9E600AF72E6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C16D014C25C7378100A32802 /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 		C12A1DF825C614D800A3FCA7 = {
 			isa = PBXGroup;
 			children = (
+				C157265325C8F9E600AF72E6 /* MapView.swift */,
 				C12A1E0325C614D800A3FCA7 /* Enroute */,
 				C12A1E0225C614D800A3FCA7 /* Products */,
 			);
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C12A1E2925C6174300A3FCA7 /* FlightAware+Enroute.swift in Sources */,
+				C157265425C8F9E600AF72E6 /* MapView.swift in Sources */,
 				C12A1E2B25C6174300A3FCA7 /* FoundationExtensions.swift in Sources */,
 				C12A1E0E25C614D900A3FCA7 /* Persistence.swift in Sources */,
 				C12A1E3125C63EBC00A3FCA7 /* Airline.swift in Sources */,
