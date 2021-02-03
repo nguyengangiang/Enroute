@@ -79,9 +79,3 @@ struct FilterFlights: View {
         }
     }
 }
-
-//struct FilterFlights_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FilterFlights()
-//    }
-//}

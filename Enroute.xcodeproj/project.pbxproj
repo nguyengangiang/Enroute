@@ -64,7 +64,6 @@
 		C12A1DF825C614D800A3FCA7 = {
 			isa = PBXGroup;
 			children = (
-				C157265325C8F9E600AF72E6 /* MapView.swift */,
 				C12A1E0325C614D800A3FCA7 /* Enroute */,
 				C12A1E0225C614D800A3FCA7 /* Products */,
 			);
@@ -82,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C12A1E0425C614D800A3FCA7 /* EnrouteApp.swift */,
+				C157265325C8F9E600AF72E6 /* MapView.swift */,
 				C12A1E3025C63EBC00A3FCA7 /* Airline.swift */,
 				C12A1E2D25C6301200A3FCA7 /* Airport.swift */,
 				C16D014C25C7378100A32802 /* Flight.swift */,
